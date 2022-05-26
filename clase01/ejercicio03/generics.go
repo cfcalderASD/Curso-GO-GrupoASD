@@ -5,6 +5,5 @@ package ejercicio03
 //Example: if the number is 5, then return 2.
 //Example: if the number is 5.0 (float64), then return 2.5
 func Operation[Number int | float64](number Number) Number {
-	//Logic here
-	return 0
+	return number / 2
 }

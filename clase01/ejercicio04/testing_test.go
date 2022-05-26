@@ -10,5 +10,15 @@ type testcase struct {
 //Tip: use t.FatalF() inside an "if" statement if the test fail
 //Example: testing Reverse("hola") should return "aloh"
 func TestReverse(t *testing.T) {
-	//logic here
+	testcases := []testcase{
+		{"Hello World!", "!dlroW olleH"},
+		{"GrupoASD", "DSAopurG"},
+		{"ana", "ana"},
+	}
+	for _, tc := range testcases {
+		outGetted := Reverse(tc.input)
+		if tc.output != outGetted {
+			t.Fatalf("Se esperaba %v, pero se obtuvo %v", tc.output, outGetted)
+		}
+	}
 }

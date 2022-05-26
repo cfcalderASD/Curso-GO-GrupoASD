@@ -6,6 +6,16 @@ package ejercicio06
 //if ball is "rojo" return "Perdiste"
 //if ball is another string then return "Sin trampas"
 func switchGame(ball string) string {
-	//Logic here
-	return ""
+	msg := ""
+	switch ball {
+	case "amarillo":
+		msg = "Ganaste"
+	case "azul":
+		msg = "Tienes otro intento"
+	case "rojo":
+		msg = "Perdiste"
+	default:
+		msg = "Sin trampas"
+	}
+	return msg
 }
